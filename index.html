@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Metro Dash</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell" aria-label="Metro Dash runner game">
+    <canvas id="gameCanvas" aria-label="Metro Dash game area"></canvas>
+
+    <header class="hud">
+      <div class="stat-card coins-card"><span class="coin-icon">★</span><strong id="coinCount">128</strong></div>
+      <div class="score-card"><strong id="score">002743</strong><b id="multiplier">×2</b></div>
+      <button id="pauseButton" class="pause-button" aria-label="Pause game">Ⅱ</button>
+      <div class="distance-card"><span class="pin">⌖</span><strong id="distance">1.2 km</strong></div>
+    </header>
+
+    <section class="start-card" id="startCard">
+      <p class="eyebrow">VANYA CITY TRANSIT</p>
+      <h1>METRO DASH</h1>
+      <p>Run the rails. Collect coins. Dodge the trains.</p>
+      <button id="playButton">Start Run <span>→</span></button>
+      <p class="keys">← → move &nbsp; · &nbsp; ↑ jump &nbsp; · &nbsp; ↓ slide</p>
+    </section>
+
+    <section class="tutorial" id="tutorial" aria-live="polite">
+      <div class="gesture-icons"><span>←</span><span>→</span><i>☝</i><span>↑</span><span>↓</span></div>
+      <p><b>Swipe to move</b><em></em><b>Swipe up to jump</b><em></em><b>Swipe down to slide</b></p>
+    </section>
+
+    <div id="pausedScreen" class="overlay hidden"><div><p>RUN PAUSED</p><button id="resumeButton">Resume</button></div></div>
+    <div id="gameOver" class="overlay hidden"><div><p>END OF THE LINE</p><strong id="finalScore">002743</strong><button id="retryButton">Run Again</button></div></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
